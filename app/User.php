@@ -2,6 +2,7 @@
 
 namespace App;
 
+<<<<<<< HEAD
 
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
@@ -12,6 +13,14 @@ use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
 class User extends Model implements AuthenticatableContract, CanResetPasswordContract 
 {
     use Authenticatable, CanResetPassword;
+=======
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+
+class User extends Authenticatable
+{
+    use Notifiable;
+>>>>>>> 08a55450e173585e40593a58e731a854be991121
 
     /**
      * The attributes that are mass assignable.
@@ -30,6 +39,7 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
     protected $hidden = [
         'password', 'remember_token',
     ];
+<<<<<<< HEAD
     
         /**
        * The database table used by the model.
@@ -66,4 +76,6 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
       }
       return false;
     }
+=======
+>>>>>>> 08a55450e173585e40593a58e731a854be991121
 }
