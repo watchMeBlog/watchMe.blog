@@ -11,6 +11,10 @@
 |
 */
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 0bd903a789ae00d439b682e51c8d16accf9fd4d2
 //Route::get('/', function () {
 //    return view('welcome');
 //});
@@ -33,7 +37,11 @@ Route::get('/home',['as' => 'home', 'uses' => 'ReviewController@index']);
 //Route::resource('auth', 'Auth\RegisterController');
 Auth::routes();
 
+<<<<<<< HEAD
 //Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+=======
+
+>>>>>>> 0bd903a789ae00d439b682e51c8d16accf9fd4d2
 // check for logged in user
 Route::group(['middleware' => ['auth']], function()
 {
@@ -61,4 +69,13 @@ Route::get('user/{id}','UserController@profile')->where('id', '[0-9]+');
 // display list of reviews
 Route::get('user/{id}/reviews','UserController@user_reviews')->where('id', '[0-9]+');
 // display single review
+<<<<<<< HEAD
 Route::get('/{slug}',['as' => 'review', 'uses' => 'ReviewController@show'])->where('slug', '[A-Za-z0-9-_]+');
+=======
+Route::get('/{slug}',['as' => 'review', 'uses' => 'ReviewController@show'])->where('slug', '[A-Za-z0-9-_]+');
+=======
+Route::get('/', function () {
+    return view('welcome');
+});
+>>>>>>> 08a55450e173585e40593a58e731a854be991121
+>>>>>>> 0bd903a789ae00d439b682e51c8d16accf9fd4d2

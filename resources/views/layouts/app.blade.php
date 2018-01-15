@@ -38,7 +38,11 @@
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
+<<<<<<< HEAD
 <!--                    <ul class="nav navbar-nav">
+=======
+                    <ul class="nav navbar-nav">
+>>>>>>> 0bd903a789ae00d439b682e51c8d16accf9fd4d2
                         <li><a href="/conference">Conferences</a></li>
                         <li><a href="/countries/conferences">By Countries</a></li>
                         <li><a href="/conferences/search">Search</a></li>
@@ -46,7 +50,11 @@
                         @if ( !Auth::guest() && Auth::user()->isAdmin() )
                             <li><a href="/admin">Admin</a></li>
                         @endif
+<<<<<<< HEAD
                     </ul>-->
+=======
+                    </ul>
+>>>>>>> 0bd903a789ae00d439b682e51c8d16accf9fd4d2
 
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">

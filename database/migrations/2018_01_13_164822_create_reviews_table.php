@@ -19,9 +19,15 @@ class CreateReviewsTable extends Migration
             $table->foreign('author_id')
                 ->references('id')->on('users')
                 ->onDelete('cascade');
+<<<<<<< HEAD
             $table->string('title');
             $table->text('body');
             $table->string('slug');
+=======
+            $table->string('title')->unique();
+            $table->text('body');
+            $table->string('slug')->unique();
+>>>>>>> 0bd903a789ae00d439b682e51c8d16accf9fd4d2
             $table->boolean('active');
             $table->timestamps();
         });

@@ -83,6 +83,7 @@ class ReviewController extends Controller
       $title = $request->input('title');
       $slug = str_slug($title);
       $duplicate = Reviews::where('slug',$slug)->first();
+<<<<<<< HEAD
 //      if($duplicate)
 //      {
 //        if($duplicate->id != $review_id)
@@ -94,6 +95,19 @@ class ReviewController extends Controller
 //          $review->slug = $slug;
 //        }
 //      }
+=======
+      if($duplicate)
+      {
+        if($duplicate->id != $review_id)
+        {
+          return redirect('edit/'.$review->slug)->withErrors('Title already exists.')->withInput();
+        }
+        else 
+        {
+          $review->slug = $slug;
+        }
+      }
+>>>>>>> 0bd903a789ae00d439b682e51c8d16accf9fd4d2
       $review->title = $title;
       $review->body = $request->input('body');
       if($request->has('save'))

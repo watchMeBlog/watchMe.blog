@@ -36,7 +36,10 @@
 						<li>
 							<a href="{{ url('/') }}">Home</a>
 						</li>
+<<<<<<< HEAD
                                                 
+=======
+>>>>>>> 0bd903a789ae00d439b682e51c8d16accf9fd4d2
 					</ul>
 
 					<ul class="nav navbar-nav navbar-right">
@@ -63,6 +66,7 @@
 									<a href="{{ url('/user/'.Auth::id()) }}">My profile</a>
 								</li>
 								<li>
+<<<<<<< HEAD
 									<a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -72,6 +76,9 @@
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                             {{ csrf_field() }}
                                         </form>
+=======
+									<a href="{{ url('/auth/logout') }}">Logout</a>
+>>>>>>> 0bd903a789ae00d439b682e51c8d16accf9fd4d2
 								</li>
 							</ul>
 						</li>
